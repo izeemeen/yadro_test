@@ -14,7 +14,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Check
-        run: ls -la
+        run: |
+          ls -la thirdparty
+          ls -la thirdparty/Catch2
 
       - name: Configure CMake
         run: |
