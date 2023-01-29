@@ -16,7 +16,7 @@ void Parse(std::vector<std::string>& column, std::vector<std::vector<std::string
     fin.open(arg, std::ios::in);
     if (!fin) {
         std::cout << "Incorrect format || Incorrect path";
-        exit(0);
+        exit(1);
     }
 
     std::vector<std::string> row;
@@ -80,7 +80,7 @@ void Convert(std::vector<std::string>& column, std::vector<std::vector<std::stri
 
         if (!flag) {
             std::cout << "Invalid cell address!";
-            exit(0);
+            exit(1);
         }
 
         flag = false;
@@ -101,14 +101,14 @@ void Convert(std::vector<std::string>& column, std::vector<std::vector<std::stri
 
         if (!flag) {
             std::cout << "Invalid cell address!";
-            exit(0);
+            exit(1);
         }
 
         flag = false;
 
         if (number_one >= data.size() || col_one >= data[0].size()) {
             std::cout << "Wrong table format!";
-            exit(0);
+            exit(1);
         }
 
         if (data[number_one][col_one][0] == '=') {
@@ -124,7 +124,7 @@ void Convert(std::vector<std::string>& column, std::vector<std::vector<std::stri
     ++iterator;
     if (!std::isdigit(data[out][in][iterator]) && !std::isalpha(data[out][in][iterator])) {
         std::cout << "Wrong operation!";
-        exit(0);
+        exit(1);
     }
 
     cell.clear();
@@ -151,7 +151,7 @@ void Convert(std::vector<std::string>& column, std::vector<std::vector<std::stri
 
         if (!flag) {
             std::cout << "Invalid cell address!";
-            exit(0);
+            exit(1);
         }
 
         flag = false;
@@ -172,12 +172,12 @@ void Convert(std::vector<std::string>& column, std::vector<std::vector<std::stri
 
         if (!flag) {
             std::cout << "Invalid cell address!";
-            exit(0);
+            exit(1);
         }
 
         if (number_two >= data.size() || col_two >= data[0].size()) {
             std::cout << "Wrong table format!";
-            exit(0);
+            exit(1);
         }
 
         if (data[number_two][col_two][0] == '=') {
@@ -201,13 +201,13 @@ void Convert(std::vector<std::string>& column, std::vector<std::vector<std::stri
         case '/':
             if (second == 0) {
                 std::cout << "Division by zero!";
-                exit(0);
+                exit(1);
             }
 
             break;
         default:
             std::cout << "Wrong operation!";
-            exit(0);
+            exit(1);
 
     }
 }
@@ -225,7 +225,7 @@ void Count(std::vector<std::string>& column, std::vector<std::vector<std::string
             }
             else if ((data[out][in][0] != '=') && (!std::isdigit(data[out][in][0]))) {
                 std::cout << "Invalid line!";
-                exit(0);
+                exit(1);
             }
         }
     }
