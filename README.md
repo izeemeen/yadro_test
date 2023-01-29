@@ -4,4 +4,7 @@
 
 ```ruby
 mkdir build
+cd build
+cmake ..
+make
 ```
