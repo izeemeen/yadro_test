@@ -49,5 +49,7 @@ jobs:
 
       - name: Run tests
         run: |
+          ls -la
+          ./test
           echo "Running unit tests ..."
           echo "unit tests done!"
