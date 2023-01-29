@@ -20,6 +20,7 @@ jobs:
         run: |
           mkdir build
           cd build
+          pwd
           cmake ..
 
       - name: Build
