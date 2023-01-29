@@ -13,3 +13,8 @@ make
 ```bash
 ./test
 ```
+Запуск приложения:
+
+```bash
+./yadro_app file.csv
+```
