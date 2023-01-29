@@ -18,3 +18,5 @@ make
 ```bash
 ./yadro_app file.csv
 ```
+
+Check Actions for more info: Build & Tests
