@@ -26,7 +26,7 @@ jobs:
 
       - name: Build
         run: |
-          pwd
+          cd build
           cmake --build .
 
       - name: Upload build artifacts for tests
