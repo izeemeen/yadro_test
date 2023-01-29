@@ -49,7 +49,7 @@ jobs:
 
       - name: Run tests
         run: |
-          ls -la
-          ./test
           echo "Running unit tests ..."
+          chmod +x test
+          ./test        
           echo "unit tests done!"
