@@ -31,7 +31,7 @@ jobs:
 
       - name: Upload build artifacts for tests
         env:
-          TESTS_DIR: ${{github.workspace}}/cmake-build-release/
+          TESTS_DIR: ${{github.workspace}}/build/
         uses: actions/upload-artifact@v2
         with:
           name: artifacts-for-tests
