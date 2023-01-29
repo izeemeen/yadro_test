@@ -5,7 +5,7 @@ TEST_CASE("Basic") {
     std::vector<std::vector<std::string>> data_actual;
     std::vector<std::string> cells_actual;
 
-    std::string str = "reportcard.csv";
+    std::string str = "file.csv";
     Parse(cells_actual, data_actual, str.data());
 
     std::vector<std::string> cells_expected = {"", "A", "B", "Cell"};
