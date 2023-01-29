@@ -17,6 +17,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Check
+        run: ls -la
 
       - name: Configure CMake
         run: cmake -B ${{env.BUILD_DIR}} -DCMAKE_BUILD_TYPE=${{env.CMAKE_BUILD_TYPE}} ${{env.CMAKE_BUILD_OPTIONS}}
