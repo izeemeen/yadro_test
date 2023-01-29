@@ -15,6 +15,7 @@ jobs:
 
       - name: Check
         run: |
+          git submodule update --init
           ls -la thirdparty
           ls -la thirdparty/Catch2
 
