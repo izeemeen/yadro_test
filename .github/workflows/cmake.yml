@@ -37,6 +37,14 @@ jobs:
           name: artifacts-for-tests
           path: ${{env.TESTS_DIR}}/
           
+      - name: Upload csv file
+        env:
+          TESTS_DIR: ${{github.workspace}}/file.csv
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts-for-tests
+          path: ${{env.TESTS_DIR}}/
+          
   Tests:
     runs-on: ubuntu-latest
     needs: Build
