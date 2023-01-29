@@ -8,7 +8,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
 set(CMAKE_EXPORT_COMPILE_COMMANDS  ON)
 
 add_subdirectory(yadro)
-add_subdirectory(${CMAKE_SOURCE_DIR}/thirdparty/Catch2)
+add_subdirectory(${CMAKE_SOURCE_DIR}/thirdparty/Catch2 EXCLUDE_FROM_ALL)
 add_subdirectory(Tests)
 add_executable(yadro_app yadro.cpp)
 target_link_libraries(yadro_app yadrolib)
