@@ -31,7 +31,7 @@ jobs:
 
       - name: Upload build artifacts for tests
         env:
-          TESTS_DIR: ${{github.workspace}}/build/
+          TESTS_DIR: ${{github.workspace}}/build/test
         uses: actions/upload-artifact@v2
         with:
           name: artifacts-for-tests
