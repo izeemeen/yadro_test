@@ -2,6 +2,6 @@
 
 Сборка:
 
-''' ruby
+```ruby
 mkdir build
-'''
+```
