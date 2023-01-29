@@ -13,11 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Check
+      - name: Clone Catch2
         run: |
           git submodule update --init
-          ls -la thirdparty
-          ls -la thirdparty/Catch2
 
       - name: Configure CMake
         run: |
@@ -27,7 +25,9 @@ jobs:
           cmake ..
 
       - name: Build
-        run: cmake --build .
+        run: |
+          pwd
+          cmake --build .
 
       - name: Upload build artifacts for tests
         env:
