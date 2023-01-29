@@ -2,7 +2,7 @@
 
 Сборка:
 
-```ruby
+```bash
 mkdir build
 cd build
 cmake ..
