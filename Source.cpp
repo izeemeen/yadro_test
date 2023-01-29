@@ -253,7 +253,7 @@ int main(int argc, char** argv) {
     for (int out = 0; out < data.size(); ++out) {
         for (int in = 0; in < data[0].size(); ++in) {
             std::cout << data[out][in];
-            if (in != data[0].size()) {
+            if (in != data[0].size() - 1) {
                 std::cout << ',';
             }
         }
